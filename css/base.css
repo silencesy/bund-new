@@ -243,6 +243,7 @@ s, i, em {
 
 .news-info .info-content {
     padding: 20px 0;
+    border-bottom: 1px solid #ddd;
 }
 
 .news-info .news {
@@ -400,6 +401,9 @@ s, i, em {
 /***================  响应式  ================***/
 
 @media screen and (max-width:767px) {
+    .navbar-header {
+        background-color: #fff; 
+    }
     .header {
         height: 51px;
         line-height: 51px;
