@@ -232,7 +232,12 @@ s, i, em {
 }
 
 .banner .banner-content .banimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
     display: none;
+    opacity: 0;
 }
 
 .video-fi {
@@ -244,11 +249,12 @@ s, i, em {
 .glory {
     width: 100%;
     padding: 10px 0;
-    background-color: #f2f2f2;
+    background-color: rgba(242,242,242,.4);
     display: none;
     position: absolute;
     left: 0;
     bottom: 0;
+    z-index: 101;
     margin: 0 auto;
 }
 
