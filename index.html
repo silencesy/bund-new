@@ -73,11 +73,11 @@
     			<div class="container">
     			  <div class="row">
     			    <div class="col-sm-6 col-xs-12">
-    			      <a href="#"><img class="pull-left" src="images/event.jpg" alt=""></a>
+    			      <a href="#"><img class="pull-left glory-logo" src="images/event.jpg" alt=""></a>
     			      <a href="#"><p class="pull-left">邦恩德第三次荣获PERE颁发“年度亚洲最佳机构”</p></a>
     			    </div>
     			    <div class="col-sm-6 col-xs-12">
-    			      <a href="#"><img class="pull-left" src="images/event.jpg" alt=""></a>
+    			      <a href="#"><img class="pull-left glory-logo" src="images/event.jpg" alt=""></a>
     			      <a href="#"><p class="pull-left">邦恩德第三次荣获PERE颁发“年度亚洲最佳机构”</p></a>
                 <a class="drop" href="#news-info"><img class="ani" src="images/dropdown.png" style="margin-left: 19px;" alt=""></a>
     			    </div>
@@ -238,90 +238,6 @@
     <script src="node_modules/lazyload/jquery.lazyload.min.js"></script>
     <script src="node_modules/anchor/jquery.anchorScroll.min.js"></script>
     <script src="node_modules/AniMate/AniMate.js"></script>
-    <script>
-          $(function(){
-        	 // 图片懒加载
-            $("img.lazy").lazyload({
-      	  			effect: "fadeIn", 
-      	  			threshold: 50,
-      			});
-
-            // 视频结束触发
-  	        $("#banvideo").on("ended",function(){
-  	            $("#banvideo").fadeOut(20);
-  	            $(".banimg").fadeIn(1000);
-  	            setTimeout(function(){
-  	            	if($(window).width()>768){
-  	            		$('.glory').slideDown(1000);
-  	            	}
-  	            },1000);
-  	        });
-  	        // 点击消失
-  	        $('.drop').on("click",function(){
-            	$('.glory').fadeOut(1000);
-            });
-          	$("#infoVideo").on("click",function(){
-          		$("#infoVideo").attr("controls","controls");
-            	if ($("#infoVideo")[0].paused) {
-              	$("#infoVideo")[0].play();
-              	$('.media-video-ad').hide();
-            } else {
-              	$("#infoVideo")[0].pause();
-              	$('.media-video-ad').show();
-              	$("#infoVideo").removeAttr("controls");
-            }
-          	});
-          	$(".media-video-ad").on("click",function(){
-            	if ($("#infoVideo")[0].paused) {
-              	$("#infoVideo")[0].play();
-              	$('.media-video-ad').hide();
-              	$("#infoVideo").attr("controls","controls");
-            } else {
-              	$("#infoVideo")[0].pause();
-              	$('.media-video-ad').show();
-              	$("#infoVideo").removeAttr("controls");
-            }
-          	});
-          	$("#infoVideo").on("ended",function(){
-            	$(".media-video-ad").show();
-            	$("#infoVideo").removeAttr("controls");
-          	});
-          	$("#infoVideo")[0].addEventListener("play",function(){
-          		$('.media-video-ad').hide();
-         	  });
-          	$("#infoVideo")[0].addEventListener("pause",function(){
-          		$('.media-video-ad').show();
-	          });
-            // 响应式图片
-            if($(window).width()>768){
-              var visualHeight = $(window).height();
-              var imgHeight = visualHeight - 80;
-              $(".banner").css({"width":"100%","height":imgHeight});
-              $(".banimg").css({"width":"100%","height":imgHeight});
-            }
-            $('.drop').anchorScroll({
-              scrollSpeed: 800 // scroll speed
-            });
-            window.onscroll = function(){
-            	if(document.body.scrollTop > 200) {
-            		$('.glory').fadeOut(1000);
-            	}
-
-            	if (scroll().top > 120) {
-		            $('.flex-nav').css("display","block");
-		        } else {
-		           $('.flex-nav').css("display","none");
-		        }	
-            };
-
-		    function scroll() {
-		        return {
-		            top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0,
-		            left: window.pageYOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0
-		        };
-    		}
-           });
-      	
-    </script>
+    <script src="node_modules/common/common.js"></script>
   </body>
 </html>
