@@ -144,12 +144,12 @@ s, i, em {
 
 /*头部开始*/
 .header {
-    height: 100px;
-    line-height: 100px;
+    height: 80px;
+    line-height: 80px;
 }
 
 .header .top-logo img {
-    width: 350px;
+    width: 250px;
 }
 
 .header .top-nav-ul li {
@@ -161,7 +161,7 @@ s, i, em {
     height: 18px;
     width: 1px;
     border-right: 1px solid #dfdfdf;
-    margin-top: 40px;
+    margin-top: 31px;
 }
 
 .header .top-nav-ul i {
@@ -173,7 +173,7 @@ s, i, em {
     display: inline-block;
     padding: 0 25px;
     height: 100%;
-    font-size: 18px;
+    font-size: 16px;
     color: #222;
 }
 
@@ -187,6 +187,8 @@ s, i, em {
 /*头部结束*/
 .banner {
     position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 .banner .banner-content video {
@@ -227,8 +229,9 @@ s, i, em {
 .glory p {
     padding-left: 8px;
     border-right: 1px solid #dfdfdf;
-    padding-right: 50px;
+    padding-right: 30px;
 }
+
 /*glory结束*/
 
 /*最新资讯开始*/
@@ -273,8 +276,12 @@ s, i, em {
     transition: all 500ms ease;
 }
 
-.news-info .info-content .info-text:hover {
+.news-info .info-content .info-text:hover{
     margin-left: 13px;
+}
+
+.news-info .info-content .info-text:hover p {
+    color: #e60012;
 }
 
 .news-info .info-content .info-text p {
@@ -282,6 +289,7 @@ s, i, em {
     color: #222;
     margin-bottom: 10px;
 }
+
 
 .news-info .info-content .info-text div {
     font-size: 14px;
@@ -333,8 +341,8 @@ s, i, em {
 
 /*底部开始*/
 .footer {
-    height: 230px;
-    padding-top: 30px;
+    height: 190px;
+    padding-top: 10px;
     background-color: #f2f2f2;
 }
 
@@ -342,13 +350,13 @@ s, i, em {
     border-bottom: 1px solid #dfdfdf;
 }*/
 .footer .footer-line {
-    margin-top: 30px;
+    margin-top: 10px;
     height: 1px;
     border-bottom: 1px solid #dfdfdf;
 }
 
 .footer .bottom-logo {
-    margin-top: 50px;
+    margin-top: 36px;
 }
 
 .footer .about-us  ul{
@@ -390,6 +398,29 @@ s, i, em {
 }
 
 /*底部结束*/
+
+/*固定导航栏开始*/
+.flex-nav {
+    height: 50px;
+    line-height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    display: none;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.flex-nav .fixed-logo img {
+    width: 220px;
+}
+
+.flex-nav .top-nav span {
+    margin-top: 15px;
+}
+
+/*固定导航栏结束*/ 
 
 
 
@@ -441,6 +472,11 @@ s, i, em {
     .news-info .info-title h2 {
         text-align: center;
     }
+
+    .news-info .news {
+        padding-left: 10px;
+    }
+
     .news-info > .container > .row {
         padding: 20px 0 20px 0;
     }
@@ -507,4 +543,93 @@ s, i, em {
         top: 55%;
     }
  
+}
+
+/*动画*/
+@-webkit-keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-4px,0);
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+@-moz-keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-4px,0);
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -8px, 0);
+    transform: translate3d(0, -8px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -6px, 0);
+    transform: translate3d(0, -6px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-4px,0);
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+.ani{
+    animation: bounce 3s linear infinite ;
 }

@@ -22,7 +22,7 @@
           <div class="row">
             <div class="top-logo pull-left  col-sm-5 col-xm-12">
               <a href="#">
-                <img class="lazy" data-original="images/logo.jpg">
+                <img src="images/logo.jpg">
               </a>
             </div>
             <div class="top-nav pull-right col-sm-7 col-xm-12">
@@ -69,28 +69,29 @@
           <a href="#"><img class="banimg img-responsive" src="images/banner.jpg" alt=""></a>
         </div>
         <!-- glory部分开始 -->
-		<section class="glory">
-			<div class="container">
-			  <div class="row">
-			    <div class="col-sm-6 col-xs-12">
-			      <a href="#"><img class="pull-left" src="images/event.jpg" alt=""></a>
-			      <a href="#"><p class="pull-left">邦恩德第三次荣获PERE颁发“年度亚洲最佳机构”</p></a>
-			    </div>
-			    <div class="col-sm-6 col-xs-12">
-			      <a href="#"><img class="pull-left" src="images/event.jpg" alt=""></a>
-			      <a href="#"><p class="pull-left">邦恩德第三次荣获PERE颁发“年度亚洲最佳机构”</p></a>
-			    </div>
-			  </div>
-			</div>
-		</section>
-      <!-- glory部分结束 -->
+    		<section class="glory">
+    			<div class="container">
+    			  <div class="row">
+    			    <div class="col-sm-6 col-xs-12">
+    			      <a href="#"><img class="pull-left" src="images/event.jpg" alt=""></a>
+    			      <a href="#"><p class="pull-left">邦恩德第三次荣获PERE颁发“年度亚洲最佳机构”</p></a>
+    			    </div>
+    			    <div class="col-sm-6 col-xs-12">
+    			      <a href="#"><img class="pull-left" src="images/event.jpg" alt=""></a>
+    			      <a href="#"><p class="pull-left">邦恩德第三次荣获PERE颁发“年度亚洲最佳机构”</p></a>
+                <a class="drop" href="#news-info"><img class="ani" src="images/dropdown.png" style="margin-left: 19px;" alt=""></a>
+    			    </div>
+    			  </div>
+    			</div>
+    		</section>
+        <!-- glory部分结束 -->
       </div>
       <!-- banner部分结束 -->
 
       
 
       <!-- 新闻资讯和媒体视频部分开始 -->
-      <section class="news-info" >
+      <section id="news-info" class="news-info" >
         <div class="container">
           <div class="row">
             <div class="news col-sm-6 col-xs-12">
@@ -183,7 +184,31 @@
         </div>
       </footer> 
       <!-- 底部部分结束 -->
-
+	<!-- 固定导航栏开始 -->
+	<header class="header flex-nav">
+        <div class="container header-con">
+          <div class="row">
+            <div class="fixed-logo pull-left  col-sm-5 col-xm-12">
+              <a href="#">
+                <img src="images/flex-logo.jpg">
+              </a>
+            </div>
+            <div class="top-nav pull-right col-sm-7 col-xm-12">
+              <ul class="top-nav-ul row">
+                <li><a href="#">首页</a></li>
+                <li><a class="active" href="#">关于邦恩德<i class="glyphicon glyphicon-menu-down"></i></a></li>
+                <span class="top-nav-line"></span>
+                <li><a href="#">我们的业务<i class="glyphicon glyphicon-menu-down"></i></a></li>
+                <span class="top-nav-line"></span>
+                <li><a href="#">新闻和媒体</a></li>
+                <span class="top-nav-line"></span>
+                <li><a href="#">联系我们</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+	<!-- 固定导航栏结束 -->
      <!-- 移动端nav开始 -->
         <nav class="navbar navbar-default navbar-fixed-top visible-xs " role="navigation">
             <div class="container-fluid mobile-nav-container">
@@ -211,22 +236,30 @@
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/lazyload/jquery.lazyload.min.js"></script>
+    <script src="node_modules/anchor/jquery.anchorScroll.min.js"></script>
+    <script src="node_modules/AniMate/AniMate.js"></script>
     <script>
           $(function(){
         	 // 图片懒加载
-              	$("img.lazy").lazyload({
-    	  			effect: "fadeIn", 
-    	  			threshold: 50,
-    			});
-	        $("#banvideo").on("ended",function(){
-	            $("#banvideo").css("display","none");
-	            $(".banimg").fadeIn(1000);
-	            setTimeout(function(){
-	            	if($(window).width()>768){
-	            		$('.glory').slideDown(1000);
-	            	}
-	            },1000);
-	        });
+            $("img.lazy").lazyload({
+      	  			effect: "fadeIn", 
+      	  			threshold: 50,
+      			});
+
+            // 视频结束触发
+  	        $("#banvideo").on("ended",function(){
+  	            $("#banvideo").fadeOut(20);
+  	            $(".banimg").fadeIn(1000);
+  	            setTimeout(function(){
+  	            	if($(window).width()>768){
+  	            		$('.glory').slideDown(1000);
+  	            	}
+  	            },1000);
+  	        });
+  	        // 点击消失
+  	        $('.drop').on("click",function(){
+            	$('.glory').fadeOut(1000);
+            });
           	$("#infoVideo").on("click",function(){
           		$("#infoVideo").attr("controls","controls");
             	if ($("#infoVideo")[0].paused) {
@@ -255,23 +288,40 @@
           	});
           	$("#infoVideo")[0].addEventListener("play",function(){
           		$('.media-video-ad').hide();
-         	});
+         	  });
           	$("#infoVideo")[0].addEventListener("pause",function(){
           		$('.media-video-ad').show();
 	          });
-	        });
+            // 响应式图片
+            if($(window).width()>768){
+              var visualHeight = $(window).height();
+              var imgHeight = visualHeight - 80;
+              $(".banner").css({"width":"100%","height":imgHeight});
+              $(".banimg").css({"width":"100%","height":imgHeight});
+            }
+            $('.drop').anchorScroll({
+              scrollSpeed: 800 // scroll speed
+            });
+            window.onscroll = function(){
+            	if(document.body.scrollTop > 200) {
+            		$('.glory').fadeOut(1000);
+            	}
 
-          // 响应式图片
-          if($(window).width()>768){
-            var visualHeight = $(window).height();
-            var imgHeight = visualHeight - 100;
-            $(".banimg").css({"width":"100%","height":imgHeight});
-          }
+            	if (scroll().top > 120) {
+		            $('.flex-nav').css("display","block");
+		        } else {
+		           $('.flex-nav').css("display","none");
+		        }	
+            };
 
-          // ###
-
-        	
-        	
+		    function scroll() {
+		        return {
+		            top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0,
+		            left: window.pageYOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0
+		        };
+    		}
+           });
+      	
     </script>
   </body>
 </html>
