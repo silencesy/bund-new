@@ -146,6 +146,10 @@ s, i, em {
 .header {
     height: 80px;
     line-height: 80px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
 }
 
 .header .top-logo img {
@@ -279,6 +283,17 @@ s, i, em {
 .glory div .glory-logo {
     width: 60px;
 } 
+
+/*锚链接点*/ 
+#anchorLink {
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    width: 0;
+    height: 0;
+    // background-color: red;
+    visibility: hidden;
+}
 
 /*glory结束*/
 
@@ -495,6 +510,10 @@ s, i, em {
     .container {
         width: 100%;
         padding: 0;
+    }
+
+    .banner .banner-content video {
+        margin-top: 0;
     }
     .row {
         margin: 0;
