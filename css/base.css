@@ -146,10 +146,13 @@ s, i, em {
 .header {
     height: 80px;
     line-height: 80px;
+    width: 100%;
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 100;
     display: none;
+    background-color: #fff;
 }
 
 .header .top-logo img {
@@ -233,7 +236,7 @@ s, i, em {
 
 .banner .banner-content video {
     width: 100%;
-    margin-top: -100px;
+    margin-top: -50px;
 }
 
 .banner .banner-content .banimg {
@@ -298,6 +301,10 @@ s, i, em {
 /*glory结束*/
 
 /*最新资讯开始*/
+.news-info {
+    display: none;
+}
+
 .news-info .info-title h2 {
     font-size: 27px;
     color: #222;
@@ -410,6 +417,7 @@ s, i, em {
     height: 190px;
     padding-top: 10px;
     background-color: #f2f2f2;
+    display: none;
 }
 
 /*.footer .footer-content {
@@ -706,23 +714,3 @@ s, i, em {
     animation: bounce 3s linear infinite ;
     z-index: 100;
 }
-
-
-/*------ business start ------*/
-.header-business {
-    // display: block;
-    // position: static;
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-/*------ business end ------*/
