@@ -329,7 +329,9 @@ a:active {
 .business-wrap .page {
     display: none;
 }
-
+#page_table_1 {
+    padding: 0 20px;
+}
 .business-wrap .active {
     display: block;
 }
@@ -370,7 +372,7 @@ a:active {
     width: 96%;
     height: 100%;
     float: left;
-    background-color: rgba(251, 248, 250, 0.74);
+    background-color: rgba(251, 248, 250, 0.5);
 }
 .tab1-title {
     width: 100%;
@@ -403,57 +405,109 @@ a:active {
 
 .tab1-brand {
     width: 100%;
-    margin: 15px 0;
-    height: 40px;
+    margin: 20px 0;
 }
-.tab1-img{
+.tab1-brand .tree-img {
+    width: 100%;
+    margin: 0;
+}
+.tab1-img {
     height: 40px;
+    margin: 0;
     text-align: center;
 }
-.tab1-img span {
+.tab1-img >div:nth-of-type(1) p, .tab1-img >div:nth-of-type(1) span {
+    margin-left: -20%;
+}
+.tab1-img >div p {
+    font-size: 16px;
+    color: #444;
+    margin: 3px 0;
+}
+.tab1-img >div span {
     display: inline-block;
-    margin-right: 15px;
+    font-size: 14px;
+    color: #666;
 }
 .b {
-    background-image: url(../images/xuebi.png);
-    width:119px; 
-    height:40px;
-    display:inline-block;
+    background-image: url(../images/xuebi2.png);
+    width: 45px; 
+    height: 45px;
+    display: inline-block;
+}
+.b2 {
+    background-image: url(../images/xuebi2.png);
+    width: 45px; 
+    height: 45px;
+    display: inline-block;
 }
 .guoji {
     background-position: 0 0;
 }
 .shagang {
-    background-position: -120px 0;
+    background-position: -46px 0;
 }
 .thebun {
-    background-position: -244px 0;
+    background-position: -92px 0;
 }
 
-.business-content {
-    margin: 0 20px;
+/*------------- 从左侧显示遮罩效果 开始 -----------------*/
+.content-four {
+    margin: 0;
 }
-.business-content >p {
-    font-size: 14px;
+.contentbox-four {
+    margin: 0;
+}
+.contentbox-four .col-md-4 {
+    width: 32.3%;
+}
+
+.con-four {
+    height: 185px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 0;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+.con-four .icon-center {
+    line-height: 205px;
+    text-align: center;   
+}
+.con-four:nth-of-type(3) {
+    margin-right: 0;
+}
+.txt-four {
+    position: absolute;
+    left: -350px;
+    top: 0;
+    width: 100%;
+    padding-top: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+.txt-four .b2-title {
+    height: 45px;
+    line-height: 45px;
+    margin-bottom: 10px;
+}
+.txt-four .b2-title span {
+    display: inline-block;
+    font-size: 16px;
     color: #444;
-    line-height: 25px;
 }
-.business-content .touzi {
-    margin: 22px 0;
+.txt-four .b2-title span:nth-of-type(2) {
+    vertical-align: top;
 }
-.business-content .touzi .touzi-title {
-    color: #427b84;
+.txt-four p {
     font-size: 14px;
-    padding-left: 5px;
-    border-left: 2px solid #427b84;
-}
-.business-content .touzi .touzi-content {
-    padding: 10px 0 0 20px;
+    color: #666;
     line-height: 25px;
+    padding: 0 15px;
 }
-.touzi .touzi-content p {
-    font-size: 14px;
-}
+/*------------- 从左侧显示遮罩效果 结束--------------*/
 .foot {
     background-color: #f2f2f2; 
 }
@@ -471,7 +525,7 @@ a:active {
 
 
 #page_table_2 {
-    padding: 15px 20px;
+    padding: 67px 20px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -518,16 +572,16 @@ a:active {
     display: inline-block;
 }
 .money {
-    background-position: 0 -39px;
+    background-position: 0 -40px;
 }
 .house {
     background-position: -48px -40px;
 }
 .zichan {
-    background-position: -94px -39px;
+    background-position: -94px -40px;
 }
 .gainian {
-    background-position: -140px -39px;
+    background-position: -140px -40px;
 }
 .power {
     background-position: 2px -86px;
@@ -650,6 +704,12 @@ a:active {
 @media screen and (max-width:320px) {
     .tab1-img span {
         margin-right: 0;
+    }
+    .con-four{
+        height: 220px;
+    }
+    .con-four .icon-center {
+        line-height: 240px;
     }
 }
 
@@ -785,7 +845,7 @@ a:active {
         width: 60%;
     }
     .business-box .container {
-        background-color: rgba(251, 248, 250, 0.74);
+        background-color: rgba(251, 248, 250, 0.5);
     }
     .business-wrap {
         background-color: rgba(0, 0, 0, 0);
@@ -821,14 +881,33 @@ a:active {
         display: inline-block;
         margin: 10px 0;
     }
-
-
-
-
+    .contentbox-four .col-xs-12 {
+        width: 100%;
+    }
+    .contentbox-four .con-four:nth-of-type(1) {
+        margin-top: 20px;
+    }
+    .tab1-img >div:nth-of-type(3) p {
+        margin-left: 25%;
+    }
+    .tab1-img >div:nth-of-type(2) p {
+        margin-left: 14%;
+    }
+    .tab1-img >div:nth-of-type(1) p {
+        margin-left: -5px;
+    }
+    .tab1-img >div {
+        padding: 0 5px;
+    }
 
  
 }
-
+/*---------- pc小屏幕 --------*/ 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .contentbox-four .col-sm-4 {
+        width: 31.8%;
+    }
+}
 /*---------- 平板 --------*/ 
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .visible-xs {
@@ -918,9 +997,20 @@ a:active {
         display: inline-block;
         margin: 10px 0;
     }
-
-
-
-
+    .contentbox-four .col-sm-4 {
+        width: 47.7%;
+    }
+    .tab1-brand {
+        margin-bottom: 20px;
+    }
+    .business-wrap {
+        width: 93%;
+    }
+    .nub {
+        width: 7%;
+    }
+    .tab1-img >div:nth-of-type(1) span {
+        margin-left: -5%;
+    }
 
 }
