@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title> </title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/demo.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -18,53 +19,94 @@
   </head>
   <body>
       <!-- 头部部分开始 -->
-      <header class="header">
-        <div class="container header-con">
-          <div class="row">
-            <div class="top-logo pull-left  col-sm-5 col-md-5">
-              <a href="#">
-                <img src="images/logo.jpg">
+      <div class="head-v3">
+        <div class="navigation-up container">
+          <div class="navigation-inner row">
+            <div class="top-logo col-md-4 col-sm-4 pull-left">
+              <a href="">
+                <img src="images/logo.jpg" alt="" class="home-icon">
               </a>
             </div>
-            <div class="top-nav pull-right col-sm-7 col-md-7">
-              <ul class="top-nav-ul row">
-                <li class="col-sm-2">
-                  <a href="#">首页</a>
+            <div class="navigation-v3 col-md-8 col-sm-8 pull-right">
+              <ul class="row top-nav-ul">
+                <li class="col-sm-2" _t_nav="home">
+                  <h2>
+                    <a href="#">首页</a>
+                  </h2>
                 </li>
                 <span class="top-nav-line"></span>
-                <li class="dropdown col-sm-2">
-                  <a  href="#" target="_self" class="dropdown-toggle" data-hover="dropdown">关于邦恩德<b class="caret"></b></a>
-                  <ul class="dropdown-menu">             
-                    <li><a href="">背景介绍</a></li>
-                    <li><a href="">投资策略</a></li>
-                    <li><a href="">领导团队</a></li>
-                  </ul>
+                <li class="col-sm-2" _t_nav="product">
+                  <h2>
+                    <a href="#">关于邦恩德 <b class="caret"></b></a>
+                  </h2>
                 </li>
                 <span class="top-nav-line"></span>
-                <li class="dropdown col-sm-2">
-                  <a href="#" target="_self" class="dropdown-toggle" data-hover="dropdown">我们的业务<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="">背景介绍</a></li>
-                      <li><a href="">投资策略</a></li>
-                    </ul>
+                <li class="col-sm-2" _t_nav="solution">
+                  <h2>
+                    <a href="#">我们的业务 <b class="caret"></b></a>
+                  </h2>
                 </li>
                 <span class="top-nav-line"></span>
-                <li class="col-sm-2">
-                  <a href="#">新闻和媒体</a>
+                <li class="col-sm-2" _t_nav="wechat">
+                  <h2>
+                    <a href="#">新闻和媒体</a>
+                  </h2>
                 </li>
                 <span class="top-nav-line"></span>
-                <li class="col-sm-2">
-                  <a href="#">联系我们</a>
+                <li class="col-sm-2" _t_nav="cooperate">
+                  <h2>
+                    <a href="#">联系我们</a>
+                  </h2>
                 </li>
                 <span class="top-nav-line"></span>
-                <li class="col-sm-2">
-                  <a href="#">English</a>
+                <li class="col-sm-2" _t_nav="support">
+                  <h2>
+                    <a href="#">English</a>
+                  </h2>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-      </header>
+        <div class="navigation-down">
+          <div id="product" class="nav-down-menu menu-1" style="display: none;" _t_nav="product">
+            <div class="navigation-down-inner">
+              <dl class="nav-l1">
+                <dt>关于邦恩德</dt>
+              </dl>
+              <dl>
+                <dd>
+                  <a hotrep="hp.header.product.storage1" href="#">背景介绍</a>
+                </dd>                
+                <dd>
+                  <a hotrep="hp.header.product.storage1" href="#">投资策略</a>
+                </dd>
+                <dd>
+                  <a hotrep="hp.header.product.storage1" href="#">领导团队</a>
+                </dd>                
+              </dl>
+            </div>
+          </div>
+          <div id="solution" class="nav-down-menu menu-1" style="display: none;" _t_nav="solution">
+            <div class="navigation-down-inner">
+              <dl class="nav-l2">
+                <dt>我们的业务</dt>
+              </dl>
+              <dl>
+                <dd>
+                  <a hotrep="hp.header.product.storage1" href="#">业务</a>
+                </dd>                
+                <dd>
+                  <a hotrep="hp.header.product.storage1" href="#">基金</a>
+                </dd>
+                <dd>
+                  <a hotrep="hp.header.product.storage1" href="#">项目</a>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- 头部部分结束 -->
       <banner class="business-banner">
         <img src="images/pro_banner.jpg" alt="">
@@ -124,13 +166,13 @@
             </div>                   
             <div class="project-content row">
               <div class="col-xs-12 col-md-6">
-                <video width="533px" height="300px" controls="controls" poster="images/pro_video1.jpg" preload="none">
+                <video width="100%" height="300px" controls="controls" poster="images/pro_video1.jpg" preload="none">
                   <source src="video/video01.mp4" type="video/mp4">
                     您的浏览器不支持Video标签。
                 </video>
               </div>
               <div class="col-xs-12 col-md-6">
-                <video width="533px" height="300px" controls="controls" poster="images/pro_video2.jpg" preload="none">
+                <video width="100%" height="300px" controls="controls" poster="images/pro_video2.jpg" preload="none">
                   <source src="video/video02.mp4" type="video/mp4">
                     您的浏览器不支持Video标签。
                 </video>                
@@ -266,52 +308,43 @@
       <!-- 底部部分结束 -->
   <!-- 固定导航栏开始 -->
   <header class="header flex-nav">
-        <div class="container header-con">
-          <div class="row">
-            <div class="fixed-logo pull-left col-sm-5 col-md-5">
-              <a href="#">
-                <img src="images/flex-logo.jpg">
-              </a>
-            </div>
-            <div class="top-nav pull-right col-sm-7 col-md-7">
-              <ul class="top-nav-ul row">
-                <li class="col-sm-2">
-                  <a href="#">首页</a>
-                </li>
-                <span class="top-nav-line"></span>
-                <li class="col-sm-2 dropdown">
-                  <a  href="#" class="dropdown-toggle" data-hover="dropdown" id="dropdownMenu1">关于邦恩德<b class="caret"></b></a>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="">背景介绍</a></li>
-                    <li><a href="">投资策略</a></li>
-                    <li><a href="">领导团队</a></li>
-                  </ul>
-                </li>
-                <span class="top-nav-line"></span>
-                <li class="col-sm-2 dropdown">
-                  <a href="#" class="dropdown-toggle" data-hover="dropdown">我们的业务<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="">背景介绍</a></li>
-                      <li><a href="">投资策略</a></li>
-                    </ul>
-                </li>
-                <span class="top-nav-line"></span>
-                <li class="col-sm-2">
-                  <a href="#">新闻和媒体</a>
-                </li>
-                <span class="top-nav-line"></span>
-                <li class="col-sm-2">
-                  <a href="#">联系我们</a>
-                </li>
-                <span class="top-nav-line"></span>
-                <li class="col-sm-2">
-                  <a href="#">English</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+    <div class="container header-con">
+      <div class="row">
+        <div class="fixed-logo pull-left col-sm-5 col-md-5">
+          <a href="#">
+            <img src="images/flex-logo.jpg">
+          </a>
         </div>
-      </header>
+        <div class="top-nav pull-right col-sm-7 col-md-7">
+          <ul class="top-nav-ul row">
+            <li class="col-sm-2">
+              <a href="#">首页</a>
+            </li>
+            <span class="top-nav-line"></span>
+            <li class="col-sm-2 dropdown">
+              <a  href="#">关于邦恩德</a>
+            </li>
+            <span class="top-nav-line"></span>
+            <li class="col-sm-2 dropdown">
+              <a href="#">我们的业务</a>
+            </li>
+            <span class="top-nav-line"></span>
+            <li class="col-sm-2">
+              <a href="#">新闻和媒体</a>
+            </li>
+            <span class="top-nav-line"></span>
+            <li class="col-sm-2">
+              <a href="#">联系我们</a>
+            </li>
+            <span class="top-nav-line"></span>
+            <li class="col-sm-2">
+              <a href="#">English</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
   <!-- 固定导航栏结束 -->
      <!-- 移动端nav开始 -->
         <nav class="navbar navbar-default navbar-fixed-top visible-xs" role="navigation">
@@ -339,7 +372,7 @@
     <!-- 移动端nav结束 -->
     <script src="node_modules/jquery/dist/jquery-1.9.1.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap-hover-dropdown/2.2.1/bootstrap-hover-dropdown.min.js"></script>
+    <script src="node_modules/common/nav.js"></script>
     <script src="node_modules/imgbox/zoom.min.js"></script>
     <script src="node_modules/video/mediaelement-and-player.min.js"></script>
     <script>

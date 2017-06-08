@@ -222,21 +222,19 @@ a:active {
     width: 210px;
     margin-bottom: 3px;
 }
-.header .top-nav-ul span {
+.top-nav-line {
     float: left;
     height: 18px;
     width: 1px;
     border-right: 1px solid #dfdfdf;
     margin-top: 31px;
 }
-// .header .top-nav-ul li {
-//     float: left;
-// }
+
 .header .top-nav-ul i {
     margin-left: 3px;
     font-weight: 200;
 }
-.header .top-nav-ul .col-sm-2 {
+.top-nav-ul .col-sm-2 {
     width: 16.5%;
     text-align: center;
     padding: 0;
@@ -887,6 +885,12 @@ a:active {
 }
 
 @media screen and (max-width:767px) {
+    .head-v3 {
+        display: none;
+    }
+    .business-banner> img {
+        margin-top: 51px;
+    }
     .navbar-header {
         background-color: #fff; 
     }
@@ -1133,7 +1137,9 @@ a:active {
         width: 100%;
         height: auto;
     }
-
+    .mejs__container {
+        background: #fff !important;
+    }
 
  
 }
@@ -1145,6 +1151,9 @@ a:active {
 }
 /*---------- 平板 --------*/ 
 @media screen and (min-width: 768px) and (max-width: 991px) {
+    .head-v3 {
+        display: none;
+    }
     .visible-xs {
         display: block !important;
     }
@@ -1255,7 +1264,7 @@ a:active {
     .project-content .gallery li img {
         width: 100%;
     }
-
+    
 
 
 
