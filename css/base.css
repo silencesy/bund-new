@@ -240,7 +240,7 @@ s, i, em {
 
 .banner .banner-content video {
     width: 100%;
-    margin-top: -50px;
+    // margin-top: -50px;
 }
 
 // .banner .banner-content .banimg {
@@ -257,6 +257,19 @@ s, i, em {
 .video-fi {
     display: none;
 }
+
+
+/*视频响应式开始*/ 
+html,body,.banner,.banner-content{
+          width: 100%;
+          height: 100%;
+      }
+      // #banvideo {
+      //     object-fit:fill;
+      //     width:100%;
+      //     height:100%;        
+      // }
+/*视频响应式结束*/ 
 
 
 /*glory开始*/
@@ -387,18 +400,18 @@ s, i, em {
 // }
 
 
-.news-info .media-video {
-    cursor: pointer;
-    position: relative;
-}
+// .news-info .media-video {
+//     cursor: pointer;
+//     position: relative;
+// }
 
-.news-info .media-video .media-video-ad{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform:translateX(-50%) translateY(-50%);
-    display: none;
-}
+// .news-info .media-video .media-video-ad{
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform:translateX(-50%) translateY(-50%);
+//     display: none;
+// }
 .news-info .info-content:last-child {
     border-width: 0;
 }
@@ -520,7 +533,13 @@ s, i, em {
 
 /***================  响应式  ================***/
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:1024px) {
+    .banner,.banner-content {
+        height: auto;
+    }    
+}
+
+@media screen and (max-width:768px) {
     .navbar-header {
         background-color: #fff; 
     }
@@ -533,8 +552,10 @@ s, i, em {
         padding: 0;
     }
 
+    
+
     .banner .banner-content video {
-        margin-top: 0;
+        margin-top: 50px;
     }
     .row {
         margin: 0;
@@ -630,11 +651,11 @@ s, i, em {
     }
 
     /*暂停图标*/ 
-    .news-info .media-video .media-video-ad {
-        width: 40px;
-        height: 40px;
-        top: 55%;
-    }
+    // .news-info .media-video .media-video-ad {
+    //     width: 40px;
+    //     height: 40px;
+    //     top: 55%;
+    // }
  
 }
 
@@ -803,14 +824,14 @@ s, i, em {
         box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
 
+    .news-info .info-content .info-img img {
+        float: none;
+    }
 
-    // .news-info .info-content .info-text div {
-    //     line-height: 22px;
-    // }
-
-    // .news-info .info-content .info-text {
-    //     width: 220px;
-    // }
+    .news-info .info-content .info-img {
+        text-align: center;
+        margin-bottom: 10px;
+    }    
 
 }
 
@@ -824,7 +845,14 @@ s, i, em {
     }
 }
 
-
-@media screen and (min-width: 740px) and (max-width: 1185px) {
-
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .news-info .info-content .info-text {
+        max-width: 300px;
+    }
+    
 }
+
+
+
+
+
