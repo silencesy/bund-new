@@ -127,6 +127,8 @@ a:active {
 }
 /*css 初始化 end */
 
+
+
 /*图片弹出层开始*/ 
 
     .mejs__overlay-button:active {
@@ -228,6 +230,10 @@ a:active {
     width: 1px;
     border-right: 1px solid #dfdfdf;
     margin-top: 31px;
+}
+
+.header .top-nav-ul {
+    height: 50px;
 }
 
 .header .top-nav-ul i {
@@ -418,12 +424,7 @@ a:active {
 .business-wrap .active {
     display: block;
 }
-.nub {
-    width: 4%;
-    float: left;
-    height: 100%;
-    padding-top: 44px;
-}
+
 .nub li {
     height: 160px;
     background-color: #fff;
@@ -452,7 +453,7 @@ a:active {
     pointer-events: none    
 }
 .business-wrap {
-    width: 96%;
+    width: 100%;
     height: 100%;
     float: left;
     background-color: rgba(251, 248, 250, 0.5);
@@ -500,7 +501,13 @@ a:active {
     text-align: center;
 }
 .tab1-img >div:nth-of-type(1) p, .tab1-img >div:nth-of-type(1) span {
-    margin-left: -20%;
+    margin-left: -5%;
+}
+.tab1-img >div:nth-of-type(2) p, .tab1-img >div:nth-of-type(2) span {
+    margin-left: 15%;
+}
+.tab1-img >div:nth-of-type(3) p, .tab1-img >div:nth-of-type(3) span {
+    margin-left: 7%;
 }
 .tab1-img >div p {
     font-size: 16px;
@@ -857,6 +864,32 @@ a:active {
 .project-box {
     padding-bottom: 0;
 }
+
+
+.project-title {
+    background-color: rgba(251, 248, 250, 0.5);
+}
+.project-title .fl {
+    background-color: #fff;
+}
+.project-title .fl span {
+    color: #444;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.project-title .ho {
+    background-color: #ae8b51;
+}
+.project-title .ho span {
+    color: #fff;
+}
+.project-box .page {
+    display: none;
+}
+.project-box .active {
+    display: block;
+}
 /*---------- project end -----------*/ 
 
 
@@ -880,6 +913,12 @@ a:active {
 
     .con-four .icon-center {
         line-height: 240px;
+    }
+    .project-title .fl span {
+        font-size: 16px;
+    }
+    .business-box .tab1-title .fl {
+        width: 106px;
     }
 
 }
@@ -1010,11 +1049,8 @@ a:active {
         width: 100%;
         height: auto;
     }
-    .nub {
-        width: 14%;
-    }
     .business-wrap {
-        width: 86%;
+        width: 100%;
     }
     .business-content >p {
         margin-top: 55px;
@@ -1032,7 +1068,7 @@ a:active {
         background-color: rgba(0, 0, 0, 0);
     }
     .tab1-title .fl {
-        width: 130px;
+        width: 125px;
     }
     .tab1-img {
         text-align: left;
@@ -1071,13 +1107,13 @@ a:active {
         margin-top: 20px;
     }
     .tab1-img >div:nth-of-type(3) p {
-        margin-left: 25%;
+        margin-left: 32%;
     }
     .tab1-img >div:nth-of-type(2) p {
-        margin-left: 14%;
+        margin-left: 30%;
     }
     .tab1-img >div:nth-of-type(1) p {
-        margin-left: -5px;
+        margin-left: 11px;
     }
     .tab1-img >div {
         padding: 0 5px;
@@ -1137,19 +1173,18 @@ a:active {
         width: 100%;
         height: auto;
     }
-<<<<<<< HEAD
+
     
     video {
         height:auto;
         max-width: 100%;
         margin-top: 10px;
     }
-=======
     .mejs__container {
         background: #fff !important;
     }
 
->>>>>>> d7852162971d87a11a5a2a4613a5caca4e2c73f7
+
  
 }
 /*---------- pc小屏幕 --------*/ 
@@ -1258,9 +1293,6 @@ a:active {
     }
     .business-wrap {
         // width: 93%;
-    }
-    .nub {
-        width: 7%;
     }
     .tab1-img >div:nth-of-type(1) span {
         margin-left: -5%;
