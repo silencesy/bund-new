@@ -9,6 +9,15 @@ a:link,a:visited{text-decoration:none;}
 .container {padding: 0;}
 .home-icon {width: 70%;}
 .head-v3{position:relative;z-index:100;width:100%;}
+.home-head {
+width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    display: none;
+    background-color: #fff;	
+}
 .head-v3 .navigation-inner{margin:0 auto;width:100%;position:relative;}
 .navigation-up{height:80px;background:#fff;line-height: 70px;}
 .navigation-up .navigation-v3 li{float:left;font:normal 16px/59px "microsoft yahei";color:#fff;}
